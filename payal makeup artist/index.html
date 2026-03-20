@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payal MakeupArtist | Enhancing Your Natural Beauty</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --blush: #fdf0ee; /* Softer, creamier blush */
+            --gold: #d4af37;
+            --dark-gold: #b8962e;
+            --charcoal: #333333;
+            --transition: all 0.4s ease;
+        }
+
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; color: var(--charcoal); overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        .bg-blush { background-color: var(--blush); }
+        .text-gold { color: var(--gold); }
+        .btn-gold { background-color: var(--gold); color: white; transition: var(--transition); border: 1px solid var(--gold); }
+        .btn-gold:hover { background-color: var(--dark-gold); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3); }
+        .btn-outline { border: 1px solid var(--gold); color: var(--gold); transition: var(--transition); }
+        .btn-outline:hover { background-color: var(--gold); color: white; }
+
+        /* Modern Sticky Header */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .nav-scrolled { padding: 0.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+
+        /* Professional Card Effect */
+        .service-card { transition: var(--transition); border: 1px solid transparent; }
+        .service-card:hover { border-color: var(--blush); transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+
+        /* Smooth Scroll Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Left-aligned WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            padding: 12px 18px;
+            box-shadow: 2px 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 14px;
+            text-decoration: none; transition: var(--transition);
+        }
+        .whatsapp-float:hover { transform: scale(1.05); background-color: #20b858; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <nav id="main-nav" class="glass-nav fixed w-full z-50 top-0 py-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gold tracking-widest uppercase flex flex-col">
+                Payal Pawar <span class="text-charcoal font-light text-xs tracking-normal normal-case opacity-70">Makeup Artist</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-xs uppercase tracking-wider items-center">
+                <a href="#home" class="hover:text-gold transition">Home</a>
+                <a href="#about" class="hover:text-gold transition">About</a>
+                <a href="#services" class="hover:text-gold transition">Services</a>
+                <a href="#gallery" class="hover:text-gold transition">Portfolio</a>
+                <a href="#contact" class="hover:text-gold transition">Contact</a>
+                <a href="#contact" class="btn-gold px-5 py-2.5 rounded-full font-semibold">Book Now</a>
+            </div>
+
+            <button class="md:hidden text-charcoal focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center bg-blush relative pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="text-gold font-medium tracking-widest uppercase text-xs mb-2 block">Professional Beauty Services</span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Enhancing Your <br><span class="text-gold italic">Natural Beauty</span></h1>
+                <p class="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">Tailored artistry celebrating your unique features, ensuring you feel radiant and confident for your most special moments.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="btn-gold px-8 py-4 rounded-full font-semibold shadow-lg text-sm uppercase tracking-wider">Book Consultation</a>
+                    <a href="#services" class="btn-outline px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wider">View Services</a>
+                </div>
+            </div>
+            
+            <div class="relative reveal delay-200">
+                <div class="absolute -inset-4 bg-gold rounded-full opacity-10 blur-2xl"></div>
+                
+                <div class="w-full h-[550px] bg-white p-3 rounded-2xl shadow-xl border border-gray-100 relative overflow-hidden">
+                    <img src="payal.jpeg" alt="Payal Pawar - Professional Makeup Artist" class="w-full h-full object-cover rounded-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-28 bg-white reveal">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <span class="text-gold font-medium tracking-widest uppercase text-xs mb-2 block">The Artist Behind the Brush</span>
+            <h2 class="text-4xl font-bold mb-8">Meet Payal Pawar</h2>
+            <div class="w-20 h-0.5 bg-blush mx-auto mb-10"></div>
+            <p class="text-gray-600 leading-relaxed text-lg italic mb-10 px-6">
+                "Passion, precision, and a love for celebrating individuality define my approach to makeup. With extensive experience in the beauty industry, I specialize in creating timeless, flawless looks that make you feel truly beautiful from the inside out."
+            </p>
+            <a href="#gallery" class="text-gold font-semibold uppercase text-sm tracking-wider hover:opacity-80 transition">Explore my work <i class="fas fa-arrow-right ml-1"></i></a>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-blush reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold font-medium tracking-widest uppercase text-xs mb-2 block">Our Services</span>
+                <h2 class="text-4xl font-bold mb-4">Luxurious Beauty Specializations</h2>
+                <p class="text-gray-500 max-w-lg mx-auto">From your dream wedding to a stylish evening out, discover artistry tailored for every occasion.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white service-card p-9 rounded-2xl">
+                    <div class="w-16 h-16 bg-blush flex items-center justify-center rounded-xl text-gold mb-6 text-2xl"><i class="fa-solid fa-gem"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Bridal Makeup</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Complete, radiant transformation for your special day, featuring high-definition finishes and expert styling.</p>
+                    <span class="text-gold font-bold text-sm tracking-wider uppercase">Starting from ₹12000</span>
+                </div>
+                <div class="bg-white service-card p-9 rounded-2xl">
+                    <div class="w-16 h-16 bg-blush flex items-center justify-center rounded-xl text-gold mb-6 text-2xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Party & Event Makeup</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Elegant, tailored looks designed to make you stand out at any celebration or social gathering.</p>
+                    <span class="text-gold font-bold text-sm tracking-wider uppercase">Starting from ₹1500</span>
+                </div>
+                <div class="bg-white service-card p-9 rounded-2xl">
+                    <div class="w-16 h-16 bg-blush flex items-center justify-center rounded-xl text-gold mb-6 text-2xl"><i class="fa-solid fa-camera"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Engagement Makeup</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Precision application specialized for photography, film, and camera-ready requirements.</p>
+                    <span class="text-gold font-bold text-sm tracking-wider uppercase">Starting from ₹4000</span>
+                </div>
+                 <div class="bg-white service-card p-9 rounded-2xl">
+                    <div class="w-16 h-16 bg-blush flex items-center justify-center rounded-xl text-gold mb-6 text-2xl"><i class="fa-solid fa-camera"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">Mehandi</h3>
+                    <p class="text-gray-600 mb-5 leading-relaxed">Mehandi for all ocassions.</p>
+                    <span class="text-gold font-bold text-sm tracking-wider uppercase">Starting from ₹4000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-14">The Portfolio</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden rounded-xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden rounded-xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1512496011212-32372995419b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden rounded-xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1457974182524-97dcb165c5a9?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <div class="aspect-[3/4] bg-gray-100 overflow-hidden rounded-xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1526045612212-70caf35c11bc?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://instagram.com/payal_makeupartist_935" target="_blank" class="text-charcoal font-medium text-sm tracking-wider border-b-2 border-blush pb-2 hover:border-gold transition">
+                    View more work on Instagram @payal_makeupartist_935
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-50 reveal">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <span class="text-gold font-medium tracking-widest uppercase text-xs mb-2 block">Connect With Us</span>
+                <h2 class="text-4xl font-bold mb-7">Get in Touch</h2>
+                <p class="text-gray-600 mb-10 leading-relaxed max-w-md">Ready to look your best for your next event? Fill out the form, send an email, or call to book your personalized consultation.</p>
+                
+                <div class="space-y-7 text-sm">
+                    <div class="flex items-center space-x-5">
+                        <div class="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center rounded-xl text-gold shadow-sm"><i class="fas fa-phone"></i></div>
+                        <div><p class="font-semibold text-charcoal">Call or Text</p><a href="tel:9021649210" class="hover:text-gold transition">+91 9021649210</a></div>
+                    </div>
+                    <div class="flex items-center space-x-5">
+                        <div class="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center rounded-xl text-gold shadow-sm"><i class="fas fa-envelope"></i></div>
+                        <div><p class="font-semibold text-charcoal">Email</p><a href="mailto:payalpawar935@gmail.com" class="hover:text-gold transition">payalpawar935@gmail.com</a></div>
+                    </div>
+                    <div class="flex items-center space-x-5">
+                        <div class="w-12 h-12 bg-white border border-gray-100 flex items-center justify-center rounded-xl text-gold shadow-sm"><i class="fas fa-location-dot"></i></div>
+                        <div><p class="font-semibold text-charcoal">Studio Location</p><p class="text-gray-600">Baramati,Pune</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+                <form action="#" class="space-y-5">
+                    <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-100 rounded-lg focus:outline-none focus:border-blush focus:ring-1 focus:ring-blush transition bg-gray-50 text-sm">
+                    <input type="email" placeholder="Your Email" class="w-full p-4 border border-gray-100 rounded-lg focus:outline-none focus:border-blush focus:ring-1 focus:ring-blush transition bg-gray-50 text-sm">
+                    <textarea placeholder="Event Details (Date, Type of Makeup...)" rows="5" class="w-full p-4 border border-gray-100 rounded-lg focus:outline-none focus:border-blush focus:ring-1 focus:ring-blush transition bg-gray-50 text-sm"></textarea>
+                    <button type="submit" class="btn-gold w-full py-4 rounded-lg font-bold uppercase text-xs tracking-wider shadow-md">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919021649210" class="whatsapp-float shadow-lg" target="_blank">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span>WhatsApp Payal</span>
+    </a>
+
+    <footer class="bg-white py-14 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-xl font-bold text-gold mb-6 uppercase tracking-widest">Payal Pawar</h2>
+            <div class="flex justify-center space-x-7 mb-10 text-charcoal text-lg opacity-70">
+                <a href="https://instagram.com/payal_makeupartist_935" class="hover:text-gold transition" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold transition"><i class="fab fa-facebook"></i></a>
+            </div>
+            <p class="text-gray-400 text-xs tracking-wider">© 2026 Payal Pawar Makeup Artist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Sticky Nav Styling on Scroll
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.add('nav-scrolled');
+                } else {
+                    nav.classList.remove('nav-scrolled');
+                }
+            });
+
+            // 2. Smooth Section Scrolling (including offset for sticky nav)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Dynamic offset for sticky nav
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 3. Scroll Reveal Animation (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.15 }); // Triggers when 15% of the element is visible
+
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
